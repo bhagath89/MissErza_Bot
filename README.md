@@ -6,6 +6,6 @@
 
 ᴍʏ ᴍᴀsᴛᴇʀ [🔥ᴘᴇʀᴄʏ ᴊᴀᴄᴋsᴏɴ🔥](https://t.me/PEROBOYY) 
 
-ᴊᴏɪɴ ғᴏʀ ᴜᴘᴅᴀᴛᴇs [@ᴊᴀʀᴠɪsʙᴏᴛ_ᴜᴘᴅᴀᴛᴇs](https://t.me/Jarvisbot_UPDATES) 
+ᴊᴏɪɴ ғᴏʀ ᴜᴘᴅᴀᴛᴇs [@ᴊᴀʀᴠɪs_ʙᴏᴛ_ᴜᴘᴅᴀᴛᴇs](https://t.me/Jarvis_bot_UPDATES) 
 
-ᴊᴏɪɴ ғᴏʀ sᴜᴘᴘᴏʀᴛ [@ᴊᴀʀᴠɪsʙᴏᴛ_sᴜᴘᴘᴏʀᴛ](https://t.me/Jarvisbor_support) 
+ᴊᴏɪɴ ғᴏʀ sᴜᴘᴘᴏʀᴛ [@ᴊᴀʀᴠɪs_ʙᴏᴛ_sᴜᴘᴘᴏʀᴛ](https://t.me/Jarvis_boT_support) 

@@ -252,8 +252,6 @@ def info(update: Update, context: CallbackContext):
     if user.username:
         text += f"\n✥ Username: @{html.escape(user.username)}"
 9
-    text += f"\n✥ Profile Link: {mention_html(user.id, 'link')}"
-
     if chat.type != "private" and user_id != bot.id:
         _stext = "\n✥ Existence: <code>{}</code>"
 

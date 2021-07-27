@@ -228,9 +228,9 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text(
         "<code>Scanning...</code>", parse_mode=ParseMode.HTML)
 
-    text = (f"╒═══「<b>Usᴇʀ Iɴғᴏ:</b> 」\n"
+    text = (f"┎━─━─<b>「ᴜsᴇʀ ɪɴғᴏ」:</b> 」\n"
             f"𝙸𝙳: <code>{user.id}</code>\n"
-            f"Fɪʀsʏ Nᴀᴍʀ: {html.escape(user.first_name)}")
+            f"Fɪʀsᴛ Nᴀᴍᴇ: {html.escape(user.first_name)}")
 
     if user.last_name:
         text += f"\nLᴀsᴛ Nᴀᴍᴇ: {html.escape(user.last_name)}"
@@ -257,7 +257,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Admin")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>𝙷𝙴𝙻𝚃𝙷:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>Hᴇʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
@@ -273,22 +273,22 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 '𝙶𝚘𝚍'."
+        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Gᴏᴅ'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 '𝙳𝚎𝚟'."
+        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Dᴇᴠ'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 '𝙳𝚛𝚊𝚐𝚘𝚗'."
+        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Dʀᴀɢᴏɴ'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 '𝙳𝚎𝚖𝚘𝚗'."
+        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Dᴇᴍᴏɴ'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 '𝚃𝚒𝚐𝚎𝚛'."
+        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Tɪɢᴇʀ'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 '𝚆𝚘𝚕𝚏'."
+        text += "\n\n𝚃𝚑𝚎 𝙳𝚒𝚜𝚊𝚜𝚝𝚎𝚛 𝚕𝚎𝚟𝚎𝚕 𝚘𝚏 𝚝𝚑𝚒𝚜 𝚙𝚎𝚛𝚜𝚘𝚗 𝚒𝚜 'Wᴏʟғ'."
         disaster_level_present = True
 
     if disaster_level_present:
@@ -407,7 +407,7 @@ def stats(update: Update, context: CallbackContext):
     process = subprocess.Popen(
         "neofetch --stdout", shell=True, text=True, stdout=subprocess.PIPE)
     output = process.communicate()[0]
-    stats = "<b>Current stats:</b>\n" + "\n" + output + "\n".join(
+    stats = "<b>❣︎ Eʀᴢᴀ Aʟʟ Sᴛᴀᴛs ❣︎:</b>\n" + "\n" + output + "\n".join(
         [mod.__stats__() for mod in STATS])
     result = re.sub(r'(\d+)', r'<code>\1</code>', stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)

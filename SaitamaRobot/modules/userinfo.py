@@ -238,7 +238,7 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code> 💞 SCANING USER 💞 </code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code> SCANING....</code>", parse_mode=ParseMode.HTML)
 
     text = (
         f"<b>┎━─━─「ᴜsᴇʀ ɪɴғᴏ」</b>\n"
@@ -251,7 +251,7 @@ def info(update: Update, context: CallbackContext):
 
     if user.username:
         text += f"\n✥ Username: @{html.escape(user.username)}"
-
+9
     text += f"\n✥ Profile Link: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
@@ -287,23 +287,28 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\n✥ 𝐋𝐄𝐆𝐄𝐍𝐃 😈"
-        disaster_level_present = False
+        text += "\n\n✥ ᒪEGEᑎᗪ "
+        disaster_level_present = True
     elif user.id in DEV_USERS:
         text += "\n\n✥ DEvⷪ USER "
-        disaster_level_present = False
+        disaster_level_present = True
     elif user.id in DRAGONS:
         text += "\n\n✥ 🐉ɾαցօղ USER "
-        disaster_level_present = False
+        disaster_level_present = True
     elif user.id in DEMONS:
         text += "\n\n✥ Dem👿n USER "
-        disaster_level_present = False
+        disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\n✥ TiGER USER oF "
-        disaster_level_present = False
+        text += "\n\n✥ TiGER USER "
+        disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\n✥ SAFE USER oF "
-        disaster_level_present = False
+        text += "\n\n✥ SAFE USER "
+        disaster_level_present = True
+
+    if disaster_level_present:
+        text += '「<a href="https://t.me/ERZA_SUPPORT"> 😁</a>」'.format(
+            bot.username
+        )
 
     try:
         user_member = chat.get_member(user.id)
@@ -417,7 +422,7 @@ def set_about_me(update: Update, context: CallbackContext):
 @run_async
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>❤ CURRENT STATS ❤:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>❣️ ERZA ALL STATS ❣️:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
 
@@ -558,7 +563,7 @@ dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
-__mod_name__ = "Info"
+__mod_name__ = "Bio/About"
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
 __handlers__ = [
     ID_HANDLER,

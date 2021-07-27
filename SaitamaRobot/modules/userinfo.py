@@ -228,20 +228,20 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text(
         "<code>Scanning...</code>", parse_mode=ParseMode.HTML)
 
-    text = (f"╒═══「<b>𝚄𝚂𝙴𝚁 𝙸𝙽𝙵𝙾 :</b> 」\n"
+    text = (f"╒═══「<b>Usᴇʀ Iɴғᴏ:</b> 」\n"
             f"𝙸𝙳: <code>{user.id}</code>\n"
-            f"𝙵𝙸𝚁𝚂𝚃 𝙽𝙰𝙼𝙴: {html.escape(user.first_name)}")
+            f"Fɪʀsʏ Nᴀᴍʀ: {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\n𝙻𝙰𝚂𝚃 𝙽𝙰𝙼𝙴: {html.escape(user.last_name)}"
+        text += f"\nLᴀsᴛ Nᴀᴍᴇ: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴: @{html.escape(user.username)}"
+        text += f"\nUsᴇʀɴᴀᴍᴇ: @{html.escape(user.username)}"
 
-    text += f"\n𝙿𝙴𝚁𝙼𝙰𝙻𝙸𝙽𝙺: {mention_html(user.id, 'link')}"
+    text += f"\nPᴇʀᴍᴀʟɪɴᴋ: {mention_html(user.id, 'link')}"
 
-    if chat.type != "𝙿𝚁𝙸𝚅𝙴𝚃" and user_id != bot.id:
-        _stext = "\n𝙿𝚁𝙴𝚂𝙴𝙽𝙲𝙴: <code>{}</code>"
+    if chat.type != "Pʀɪᴠᴇᴛ" and user_id != bot.id:
+        _stext = "\nPʀᴇsᴇɴᴄᴇ: <code>{}</code>"
 
         afk_st = is_user_afk(user.id)
         if afk_st:

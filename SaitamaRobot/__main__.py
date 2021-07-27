@@ -69,7 +69,7 @@ buttons = [
             text="🔶 ADD ME TO YOUR GROUP 🔶", url="t.me/MISSERZA_BOT?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ABOUT ℹ️", callback_data="yone_"),
+        InlineKeyboardButton(text="OWNER 🇮🇳", url="https://t.me/J_O_K_E_R_XD"),
         InlineKeyboardButton(text="COMMANDS ⁉️", callback_data="help_back"),
     ],
     [
@@ -243,23 +243,23 @@ def SaitamaRobot_about_callback(update, context):
     if query.data == "aboutmanu_":
         query.message.edit_text(
             text=f"*Hi again! The name's {dispatcher.bot.first_name}. \n\nAs  You I'm An Anime Themed Group Management Bot.* "
-                 f"\n\n Join [Updates Channel](https://t.me/SuzuyaUpdates) To Keep Yourself Updated About {dispatcher.bot.first_name}."
+                 f"\n\n Join [Updates Channel](https://t.me/ERZA_UPDATES) To Keep Yourself Updated About {dispatcher.bot.first_name}."
                  f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-                 f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features. [◖⚆ᴥ⚆◗](https://telegra.ph/file/7f6a4d656e89553340af9.jpg)."
+                 f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features. [◖⚆ᴥ⚆◗](https://telegra.ph/file/f7cb50f66cb27baf21738.jpg)."
                  f"\n\nYou Can Know More About Me By Clicking The Below Buttons.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                    InlineKeyboardButton(text="How To Use Me", callback_data="aboutmanu_howto"),
+                    InlineKeyboardButton(text="How To Use Me 🤔", callback_data="aboutmanu_howto"),
                     InlineKeyboardButton(text="T & C", callback_data="aboutmanu_tac")
                   ],
                  [
                     InlineKeyboardButton(text="❔Help & Commands", callback_data="help_back")
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")
+                    InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_back")
                  ] 
                 ]
             ),
@@ -276,7 +276,7 @@ def SaitamaRobot_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
                  f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-                 f"\n\nYou Can Know Main commands of {dispatcher.bot.first_name} by Just Clicking [Here](https://telegra.ph/SUZUYA-GM-BOT-12-16).\n"
+                 f"\n\nYou Can Know Main commands of {dispatcher.bot.first_name} by Just Clicking [Here](https://telegra.ph/%F0%9D%90%84%F0%9D%90%91%F0%9D%90%99%F0%9D%90%80-07-27).\n"
                  f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -290,12 +290,11 @@ def SaitamaRobot_about_callback(update, context):
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is A Powerful Bot For Managing Groups With Additional Features.*"
-                 f"\n\nFork Of [Shoko](https://github.com/gizmostuffin/Shoko) + [Saitama](https://github.com/AnimeKaizoku/SaitamaRobot)."
                  f"\n\n{dispatcher.bot.first_name}'s Licensed Under The GNU _(General Public License v3.0)_"
                  f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_tac")]]),
         )
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
@@ -307,7 +306,7 @@ def SaitamaRobot_about_callback(update, context):
                  f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
                  f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
             parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_howto")]]),
         )
     elif query.data == "aboutmanu_spamprot":
         query.message.edit_text(
@@ -334,7 +333,7 @@ def SaitamaRobot_about_callback(update, context):
                  "\n\n- /welcomemute <off/soft/strong>: All users that join, get muted"
                  "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_howto")]]),
         )
     elif query.data == "aboutmanu_tac":
         query.message.edit_text(
@@ -441,7 +440,7 @@ def get_help(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Open In Private Chat",
+                            text="Open In Private Chat 😗",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -487,7 +486,7 @@ def gethelp(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Go to the chat",
+                            text="Go to the chat 😘",
                             url=f"telegram.me/{context.bot.username}",
                             
                         )
